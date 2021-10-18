@@ -1,16 +1,25 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-function DogDetails({ dogs }) {
+/** Shows all of the info about a single dog
+ * 
+ * props:
+ * -dogs
+ * 
+ * state:
+ * -none
+ * 
+ * events:
+ * -none
+ */
 
+function DogDetails({ dogs }) {
     const { name } = useParams();
 
-    console.log("DogDetails - useParams()", useParams());
-    console.log("DogDetails - name:", { name });
-    console.log("DogDetails - dogs:", { dogs });
+    console.log("DogDetails", { dogs, name });
 
     const requestedDog = dogs.find(dog =>
-        dog.name.toLowerCase() === name)
+        dog.name.toLowerCase() === name);
 
     console.log("DogDetails - requestedDog:", { requestedDog });
 
