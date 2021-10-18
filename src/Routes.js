@@ -1,16 +1,17 @@
 import React from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect, useParams } from "react-router-dom";
 import DogDetails from "./DogDetails";
 import DogList from "./DogList";
 
-function Routes() {
+function Routes({dogs}) {
+    console.log("Routes dogs:",dogs);
     return (
         <Switch>
             <Route exact path="/dogs" >
-                <DogList />
+                <DogList dogs={dogs}/>
             </Route>
             <Route exact path="/dogs/:name" >
-                <DogDetails />
+                <DogDetails dogs={dogs} />
             </Route>
             <Redirect to="/dogs" />
         </Switch>

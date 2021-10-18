@@ -1,15 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Nav({ names }) {
+function Nav({ dogs }) {
+    console.log("Nav:",dogs);
     return (
         <ul>
             <NavLink exact to="/dogs">
                 Home
             </NavLink>
-            {names.map(name => (
-                <li key={name}>
-                    <NavLink exact to={`/dogs/${name}`}>{name}</NavLink>
+            {dogs.map(dog => (
+                <li key={dog.name}>
+                    <NavLink exact to={`/dogs/${dog.name.toLowerCase()}`}>{dog.name}</NavLink>
                 </li>
             ))}
         </ul>
