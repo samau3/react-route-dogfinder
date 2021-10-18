@@ -17,7 +17,7 @@ import DogList from "./DogList";
  */
 
 function Routes({ dogs }) {
-    console.log("Routes dogs:", dogs);
+    console.log("Routes dogs:", { dogs });
     return (
         <Switch>
             <Route exact path="/dogs" >

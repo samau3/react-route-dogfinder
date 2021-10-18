@@ -19,10 +19,10 @@ function DogList({ dogs }) {
         <div>
             {dogs.map(dog => (
                 <div key={`${dog.name.toLowerCase()}`}>
-                    <img src={`../${dog.src}.jpg`} alt={`${dog.src}`} />
+                    <img src={`/${dog.src}.jpg`} alt={dog.src} />
                     <h2>
                         <Link to={`/dogs/${dog.name.toLowerCase()}`}>
-                            {`${dog.name}`}
+                            {dog.name}
                         </Link>
                     </h2>
                 </div>
@@ -30,5 +30,6 @@ function DogList({ dogs }) {
         </div>
     );
 }
-
+// the index.html is the site, so don't need to back out to access the other files
+// in the public folder
 export default DogList;

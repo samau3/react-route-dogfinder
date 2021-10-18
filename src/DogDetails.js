@@ -18,6 +18,7 @@ function DogDetails({ dogs }) {
 
     console.log("DogDetails", { dogs, name });
 
+    // code destructure requestDog to type less later
     const requestedDog = dogs.find(dog =>
         dog.name.toLowerCase() === name);
 
@@ -28,16 +29,15 @@ function DogDetails({ dogs }) {
             <p>Name: {requestedDog.name}</p>
             <img src={`../${requestedDog.src}.jpg`} alt={`${requestedDog.src}`} />
             <p>Age: {requestedDog.age} </p>
-            <p>Facts:
-                <ul>
-                    {requestedDog.facts.map(fact => (
-                        <li key={fact}>
-                            Fact: {fact}</li>
-                    ))}
-                </ul>
-            </p>
+            Facts:
+            <ul>
+                {requestedDog.facts.map(fact => (
+                    <li key={fact}>
+                        Fact: {fact}</li>
+                ))}
+            </ul>
         </div>
-    )
+    );
 }
 
 export default DogDetails;

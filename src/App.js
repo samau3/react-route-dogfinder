@@ -24,9 +24,10 @@ function App() {
 
   console.log("App", { dogs, shouldLoad });
 
+  /** Call API for dog information and update state */
   async function getDogs() {
     let response = await axios.get("http://localhost:5000/dogs");
-    setDogs(dogs => response.data);
+    setDogs(response.data);
   };
 
   if (shouldLoad) {
