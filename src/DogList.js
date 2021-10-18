@@ -17,6 +17,7 @@ function DogList({ dogs }) {
     console.log("DogList", { dogs });
     return (
         <div>
+            <h2> Dog List </h2>
             {dogs.map(dog => (
                 <div key={`${dog.name.toLowerCase()}`}>
                     <img src={`/${dog.src}.jpg`} alt={dog.src} />

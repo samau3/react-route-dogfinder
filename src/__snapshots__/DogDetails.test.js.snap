@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <p>
+      Name: Whiskey
+    </p>
+    <img
+      alt="whiskey"
+      src="../whiskey.jpg"
+    />
+    <p>
+      Age: 5 
+    </p>
+    Facts:
+    <ul>
+      <li>
+        Fact: Whiskey loves eating popcorn.
+      </li>
+      <li>
+        Fact: Whiskey is a terrible guard dog.
+      </li>
+      <li>
+        Fact: Whiskey wants to cuddle with you!
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;
